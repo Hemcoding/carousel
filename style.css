@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#canvas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(138, 165, 247);
+}
+
+#container{
+    width: 50vw;
+    aspect-ratio: 12/8;
+    margin: auto;
+    position: relative;
+    background-color: aliceblue;
+    overflow: hidden;
+    border-radius: 15px;
+    /* -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4)); */
+    box-shadow: 10px 15px 50px lightslategray;
+
+}
+
+#flex-container{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    transition: 2s cubic-bezier(0.19,-0.05, 0.77, 2);
+    /* clip-path: circle(97.9% at 2% 51%);
+    transition-property: clip-path;
+    clip-path: circle(0.4% at 1% 50%); */
+    
+
+}
+
+.btn{
+    position: absolute;
+    top: 50%;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: rgb(220, 226, 245);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#left{
+    left: 20px;
+}
+
+#right{
+    right: 20px;
+}
+
+#dots{
+    display: flex;
+    width: 100%;
+    height: 35px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.dot{
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: aliceblue;
+    z-index: 2;
+}
+
+.dot.active{
+    background-color: darkgray;
+}
+
+@media only screen and (min-width: 400px ) {
+    #container{
+        width: 90vw;
+        box-shadow: 15px 15px 50px lightslategray;
+    }
+
+    #left{
+        left: 15px;
+    }
+    
+    #right{
+        right: 15px;
+    }
+
+    #dots{
+        height: 30px;
+    }
+
+    #flex-container{
+        transition: 1s cubic-bezier(0.19,-0.05, 0.77, 2);
+    }
+}
+@media only screen and (max-width: 400px ) {
+    #container{
+        width: 90vw;
+        box-shadow: 15px 15px 50px lightslategray;
+    }
+
+    #left{
+        left: 15px;
+    }
+    
+    #right{
+        right: 15px;
+    }
+
+    #dots{
+        height: 30px;
+    }
+
+    #flex-container{
+        transition: 1s cubic-bezier(0.19,-0.05, 0.77, 2);
+    }
+}
+@media only screen and (min-width: 800px ) {
+    #container{
+        width: 90vw;
+        box-shadow: 20px 20px 50px lightslategray;
+    }
+
+    #left{
+        left: 18px;
+    }
+    
+    #right{
+        right: 18px;
+    }
+
+    #dots{
+        height: 35px;
+    }
+
+    #flex-container{
+        transition: 1.5s cubic-bezier(0.19,-0.05, 0.77, 2);
+    }
+}
+
+@media only screen and (min-width: 1200px ) {
+    #container{
+        width: 50vw;
+        box-shadow: 25px 25px 50px lightslategray;
+    }
+
+    #left{
+        left: 25px;
+    }
+    
+    #right{
+        right: 25px;
+    }
+
+    #dots{
+        height: 40px;
+    }
+
+    #flex-container{
+        gap: 614px;
+        object-fit: cover;
+        width : 20%;
+        transition: 2s cubic-bezier(0.19,-0.05, 0.77, 2);
+    }
+
+}
